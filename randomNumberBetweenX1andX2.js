@@ -15,6 +15,12 @@ function setup() {
     return { screen, start, end };
 }
 
+function calcRandomNumberInRange(x1, x2) {
+    const diff = x2 - x1;
+    const randomDiff = diff / 100 * (Math.random() * 100);
+    return randomDiff + x1;
+}
+
 function draw(world) {
     r.ClearBackground(r.BLUE);
 
@@ -25,7 +31,8 @@ function draw(world) {
 }
 
 function update(world) {
-    const randomX = Math.random() * world.screen.WIDTH;
+    const randomX = calcRandomNumberInRange(30, 40);
+    console.log(randomX);
 
     world.start = { x: randomX, y: 0 };
     world.end = { x: randomX, y: world.screen.HEIGHT }
