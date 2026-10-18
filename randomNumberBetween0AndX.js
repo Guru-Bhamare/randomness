@@ -7,7 +7,8 @@ function setup() {
         WIDTH: 400,
     }
 
-    r.InitWindow(world.WIDTH, world.HEIGHT, "a");
+    r.SetTraceLogLevel(r.LOG_NONE);
+    r.InitWindow(world.WIDTH, world.HEIGHT, "random");
 
     return world;
 
@@ -16,6 +17,9 @@ function setup() {
 function draw(world) {
 
     r.ClearBackground(r.WHITE);
+
+    const randomX = Math.random() * world.WIDTH;
+    console.log(randomX);
 
     r.BeginDrawing();
     r.EndDrawing();
