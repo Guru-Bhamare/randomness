@@ -16,10 +16,14 @@ function setup() {
 
 function draw(world) {
 
-    r.ClearBackground(r.WHITE);
+    r.ClearBackground(r.BLUE);
 
     const randomX = Math.random() * world.WIDTH;
-    console.log(randomX);
+
+    const start = { x: randomX, y: 0 };
+    const end = { x: randomX, y: world.HEIGHT }
+
+    r.DrawLineEx(start, end, 3, r.WHITE);
 
     r.BeginDrawing();
     r.EndDrawing();
