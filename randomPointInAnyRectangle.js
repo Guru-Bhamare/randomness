@@ -2,18 +2,18 @@ const r = require('raylib');
 
 function setup() {
     const screen = {
-        HEIGHT: 400,
-        WIDTH: 400,
+        HEIGHT: 800,
+        WIDTH: 800,
     }
 
     const circleX = 0
     const circleY = 0;
 
     const rect = {
-        x: 100,
-        y: 100,
-        width: 200,
-        height: 200,
+        x: 400,
+        y: 400,
+        width: 300,
+        height: 300,
     }
 
     r.SetTraceLogLevel(r.LOG_NONE);
