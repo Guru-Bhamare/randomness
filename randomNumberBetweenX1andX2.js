@@ -31,8 +31,7 @@ function draw(world) {
 }
 
 function update(world) {
-    const randomX = calcRandomNumberInRange(30, 40);
-    console.log(randomX);
+    const randomX = calcRandomNumberInRange(400, 700);
 
     world.start = { x: randomX, y: 0 };
     world.end = { x: randomX, y: world.screen.HEIGHT }
