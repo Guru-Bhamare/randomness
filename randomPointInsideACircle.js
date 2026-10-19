@@ -24,7 +24,7 @@ function setup() {
     r.InitWindow(screen.WIDTH, screen.HEIGHT, "random");
 
     const cosValues = {};
-    const constCircleRadius = 200;
+    const constCircleRadius = 100;
 
     for (let i = 0; i <= noOfPoints; i++) {
         const valX = Math.floor(calcRandomNumberInRange(0, 360));
