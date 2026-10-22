@@ -27,16 +27,17 @@ function setup() {
     const constCircleRadius = 100;
 
     for (let i = 0; i <= noOfPoints; i++) {
-        const valX = Math.floor(calcRandomNumberInRange(0, 360));
+        const valX = Math.floor(calcRandomNumberInRange(270, 360));
+        const valY = Math.floor(calcRandomNumberInRange(270, 360));
         const radius = Math.floor(calcRandomNumberInRange(0, constCircleRadius));
 
         const cosVal = convertToRadient(valX);
-        const sinVal = convertToRadient(valX);
+        const sinVal = convertToRadient(valY);
 
         cosValues[i] = {
-            x: (Math.floor(screen.WIDTH / 2 + (radius * Math.cos(cosVal)))),
-            y: (Math.floor(screen.HEIGHT / 2 + (radius * Math.sin(sinVal)))),
-            r: radius,
+            x: (Math.floor(screen.WIDTH / 2 + (100 * Math.cos(cosVal)))),
+            y: (Math.floor(screen.HEIGHT / 2 + (100 * Math.sin(sinVal)))),
+            // r: radius,
         };
 
     }
@@ -46,7 +47,7 @@ function setup() {
 
 function draw(world) {
     r.ClearBackground(r.WHITE);
-    console.log(world.constCircleRadius);
+    // console.log(world.constCircleRadius);
     r.DrawCircleLines(world.screen.WIDTH / 2, world.screen.HEIGHT / 2, world.constCircleRadius, r.RED);
 
     for (const values of Object.values(world.cosValues)) {
