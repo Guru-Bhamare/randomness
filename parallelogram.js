@@ -12,7 +12,7 @@ function calcVertices(v1, v2) {
     return { pointA, pointB, pointC, pointD };
 }
 
-function randPointsInParallelogram(v1, v2, pointA, noOfPoints) {
+function randomPointsInParallelogram(v1, v2, pointA, noOfPoints) {
     const circleCoordinates = [];
     for (let i = 0; i < noOfPoints; i++) {
 
@@ -50,7 +50,7 @@ function setup() {
     }
 
     const circleCoordinates =
-        randPointsInParallelogram(v1, v2, pointA, noOfPoints);
+        randomPointsInParallelogram(v1, v2, pointA, noOfPoints);
 
     return { screen, points, circleCoordinates };
 }
@@ -63,7 +63,7 @@ function drawParallelogram(p) {
     r.DrawLineV(p.c, p.a, r.RED);
 }
 
-function drawRandPointsInParallelogram(circleCoordinates) {
+function drawRandonmPointsInParallelogram(circleCoordinates) {
     for (const element of circleCoordinates) {
         r.DrawCircle(element.x, element.y, 5, r.YELLOW)
     }
@@ -76,7 +76,7 @@ function draw(world) {
     const p = world.points;
 
     drawParallelogram(p);
-    drawRandPointsInParallelogram(world.circleCoordinates);
+    drawRandonmPointsInParallelogram(world.circleCoordinates);
 
     r.BeginDrawing();
     r.EndDrawing();
