@@ -16,7 +16,7 @@ function setup() {
         { x: 100, y: 500 }
     ]
 
-    let point = { x: 250, y: 300 };
+    let point = { x: 300, y: 300 };
 
     const triangle = {
         point,
@@ -38,7 +38,7 @@ function draw(world) {
 
     r.ClearBackground(r.WHITE);
 
-    r.DrawCircle(point.x, point.y, 3, r.YELLOW);
+    r.DrawCircle(point.x, point.y, 3, r.DARKGREEN);
     r.DrawTriangleLines(vertices[0], vertices[1], vertices[2], r.RED);
 
     r.BeginDrawing();
