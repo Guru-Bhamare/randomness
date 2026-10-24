@@ -10,10 +10,18 @@ function setup() {
         title: "Chaos Game"
     }
 
-    const triangleVertices = [{ x: 600, y: 500 }, { x: 300, y: 250 }, { x: 100, y: 500 }]
+    const triangleVertices = [
+        { x: 600, y: 500 },
+        { x: 300, y: 250 },
+        { x: 100, y: 500 }
+    ]
+
+    let point = { x: 250, y: 300 };
 
     const triangle = {
+        point,
         vertices: triangleVertices,
+
     }
 
     r.SetTargetFPS(screen.FPS)
@@ -26,9 +34,11 @@ function setup() {
 function draw(world) {
 
     const vertices = world.triangle.vertices;
+    const point = world.triangle.point;
 
     r.ClearBackground(r.WHITE);
 
+    r.DrawCircle(point.x, point.y, 3, r.YELLOW);
     r.DrawTriangleLines(vertices[0], vertices[1], vertices[2], r.RED);
 
     r.BeginDrawing();
