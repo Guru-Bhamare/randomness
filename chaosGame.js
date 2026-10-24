@@ -18,8 +18,14 @@ function setup() {
 
     let point = { x: 300, y: 300 };
 
+    const scaledDownBy2 = {
+
+        x: ((point.x - triangleVertices[2].x) / 2) + triangleVertices[2].x,
+        y: (point.y - triangleVertices[2].y) / 2 + triangleVertices[2].y,
+    }
+
     const triangle = {
-        point,
+        point: scaledDownBy2,
         vertices: triangleVertices,
 
     }
