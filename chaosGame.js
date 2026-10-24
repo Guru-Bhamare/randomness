@@ -1,0 +1,64 @@
+
+const r = require('raylib');
+
+function setup() {
+
+    const screen = {
+        HEIGHT: 800,
+        WIDTH: 800,
+        FPS: 60,
+        title: "Chaos Game"
+    }
+
+    const triangleVertices = [{ x: 600, y: 500 }, { x: 300, y: 250 }, { x: 100, y: 500 }]
+
+    const triangle = {
+        vertices: triangleVertices,
+    }
+
+    r.SetTargetFPS(screen.FPS)
+    r.InitWindow(screen.WIDTH, screen.HEIGHT, screen.title);
+
+    return { screen, triangle };
+
+}
+
+function draw(world) {
+
+    const vertices = world.triangle.vertices;
+
+    r.ClearBackground(r.WHITE);
+
+    r.DrawTriangleLines(vertices[0], vertices[1], vertices[2], r.RED);
+
+    r.BeginDrawing();
+    r.EndDrawing();
+
+}
+
+function update(world) {
+
+}
+
+function loop(world) {
+    while (!r.WindowShouldClose()) {
+
+        draw(world);
+        update(world);
+
+    }
+
+}
+
+function tearDown() {
+    r.CloseWindow();
+}
+
+function main() {
+    const world = setup();
+    loop(world);
+    tearDown();
+
+}
+
+main();
