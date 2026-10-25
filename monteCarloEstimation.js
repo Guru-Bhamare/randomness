@@ -71,7 +71,6 @@ function setup() {
 }
 
 function draw(world) {
-
     const s = world.square;
     const c = world.circle;
     r.ClearBackground(r.WHITE);
@@ -86,19 +85,14 @@ function draw(world) {
 
     r.BeginDrawing();
     r.EndDrawing();
-
 }
 
-function update(world) {
-
-}
+function update(world) { }
 
 function loop(world) {
     while (!r.WindowShouldClose()) {
-
         draw(world);
         update(world);
-
     }
 }
 

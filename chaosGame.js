@@ -23,7 +23,6 @@ function coordinatesOfPoints(noOfPoints, triangleVertices) {
         point = scaledDownBy2;
         points.push(scaledDownBy2);
     }
-
     return points;
 }
 
@@ -66,21 +65,16 @@ function draw(world) {
 
     r.ClearBackground(r.WHITE);
 
-
     for (const v of points) {
         r.DrawCircle(v.x, v.y, 5, r.DARKBLUE)
     }
-
     r.DrawTriangleLines(vertices[0], vertices[1], vertices[2], r.RED);
-
     r.BeginDrawing();
     r.EndDrawing();
 
 }
 
-function update(world) {
-
-}
+function update(world) { }
 
 function loop(world) {
     while (!r.WindowShouldClose()) {
