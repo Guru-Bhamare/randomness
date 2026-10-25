@@ -68,15 +68,12 @@ function setup() {
     r.SetTargetFPS(screen.FPS);
 
     return { screen, square, circle, pointsInSqaure };
-
 }
 
 function draw(world) {
 
     const s = world.square;
     const c = world.circle;
-
-
     r.ClearBackground(r.WHITE);
 
     r.DrawCircle(c.x, c.y, c.radius, r.DARKBLUE);
