@@ -38,9 +38,7 @@ function setup() {
         radius: 150,
     }
 
-
     const randomPointsInSquare = [];
-
 
     let pointsInCirlce = 0;
 
@@ -57,7 +55,6 @@ function setup() {
 
         randomPointsInSquare.push({ x: randomPointX, y: randomPointY })
     }
-
 
     const oneRandomPointArea = (square.side * square.side) / square.points;
 
